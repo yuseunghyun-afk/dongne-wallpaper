@@ -8,10 +8,10 @@ export const PLACES = {
   hallstatt: { model: '/data/hallstatt.model.json', cx: '-12', cz: '-42', zoom: '4.2' },
   venice:    { model: '/data/venice.model.json', zoom: '2.6' },
   kyoto:     { model: '/data/kyoto.model.json', cx: '-105', cz: '-112', zoom: '3.2' },
-  manarola:  { model: '/data/manarola.model.json', zoom: '2.6' },
-  giza:      { model: '/data/giza.model.json', zoom: '0.75' },
-  taj:       { model: '/data/taj.model.json', cx: '-2', cz: '-110', zoom: '1.8' },
-  petra:     { model: '/data/petra.model.json', cx: '48', cz: '16', zoom: '4.6' },
+  manarola:  { model: '/data/manarola.model.json', cx: '-45', cz: '40', zoom: '2.4' },
+  giza:      { model: '/data/giza.model.json', cx: '-70', cz: '70', zoom: '1.1' },
+  taj:       { model: '/data/taj.model.json', cx: '-2', cz: '-40', zoom: '2' }, // 뒤 빈 땅 대신 정원이 차게, 타지마할은 왼쪽 위로
+  petra:     { model: '/data/petra.model.json', cx: '95', cz: '-33', zoom: '6.5' }, // 앞 광장 여백을 줄이려고 정면을 아래쪽에
   everest:   { model: '/data/everest.model.json', zoom: '0.13' },
   jodhpur:   { model: '/data/jodhpur.model.json', cx: '-110', cz: '-150', zoom: '1.7' },
 };
