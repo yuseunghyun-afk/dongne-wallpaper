@@ -75,7 +75,7 @@
     <button class="btn primary" id="setWall">배경화면으로 설정</button>
     <div class="row">
       <a class="btn secondary" id="saveImg" download>이미지 저장</a>
-      <a class="btn secondary" id="saveVid" download>영상 저장</a>
+      <a class="btn secondary" id="saveVid" download>라이브 포토용 영상</a>
     </div>
   </div>
 </div>
@@ -90,7 +90,13 @@
     <li>동작 추가: <b>URL의 콘텐츠 가져오기</b> (URL 자리에 <b>단축어 입력</b>)</li>
     <li>동작 추가: <b>배경화면 사진 설정</b> (Set Wallpaper Photo) → 잠금 화면·홈 화면 고르고, <b>미리보기 보기</b>를 끄면 확인 없이 바로 바뀝니다</li>
   </ol>
-  <p>영상은 배경화면으로 쓸 수 없습니다(아이폰 제한). 영상을 저장한 뒤 라이브 포토 변환 앱으로 바꾸면 잠금 화면을 깨울 때 잠깐 움직이게 할 수 있습니다.</p>
+  <h2 style="margin-top:18px">움직이는 잠금 화면 (라이브 포토)</h2>
+  <p>아이폰은 영상을 배경화면으로 못 쓰지만, 라이브 포토는 잠금 화면을 깨울 때 잠깐 움직입니다.</p>
+  <ol>
+    <li>명소를 열고 <b>라이브 포토용 영상</b>(3초)을 받아 사진에 저장</li>
+    <li>무료 변환 앱(예: <b>intoLive</b>)에서 그 영상을 골라 <b>라이브 포토로 저장</b></li>
+    <li>설정 → 배경화면 → 새 배경화면 → 그 라이브 포토 → 잠금 화면에 적용</li>
+  </ol>
   <button class="btn" id="sheetClose">알겠어요</button>
 </div>
 <div class="toast" id="toast"></div>
@@ -118,7 +124,7 @@
     $('vTitle').innerHTML = `${name}<small>${where}</small>`;
     $('big').poster = asset(p, '-poster.jpg'); $('big').src = asset(p, '.mp4'); $('big').play().catch(() => {});
     $('saveImg').href = asset(p, '.jpg'); $('saveImg').download = `${p}.jpg`;
-    $('saveVid').href = asset(p, '.mp4'); $('saveVid').download = `${p}.mp4`;
+    $('saveVid').href = asset(p, '-live.mp4'); $('saveVid').download = `${p}-live.mp4`; // 3초: 라이브 포토 변환 앱에 맞는 길이
     $('viewer').classList.add('open'); $('viewer').setAttribute('aria-hidden', 'false');
     history.pushState({ p }, '');
   }
